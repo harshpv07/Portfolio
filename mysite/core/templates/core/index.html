@@ -17,8 +17,8 @@
 
 <div class = "section" style = "background-color:#EBAEE4; padding-bottom : 20px;" id = "projects">
   <div class = "container" >
-    <div class="row">
-      <div class="col-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 ">
         .<div class="card text-dark"  style = "background-color : #E8E7E8;width : 300px ; height : 400px;">
           <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
           <div class="card-body">
@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-lg-4">
         .<div class="card text-dark"  style = "background-color : #E8E7E8;width : 300px ; height : 400px;">
           <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
           <div class="card-body">
@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-lg-4">
         .<div class="card text-dark"  style = "background-color : #E8E7E8; width : 300px ; height : 400px;">
           <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
           <div class="card-body">
@@ -53,26 +53,41 @@
 </div>
 
 
-<div class="section" id = "techstack" >
-  <div class="container" style="padding-top : 20px">
+<div class="section" id = "techstack" style = "background-color: #BEF1FF;">
+  <div class="container" style="padding-top : 20px ; padding-bottom : 20px">
     <div class="row">
-      <div class="col-3 gy-2">
+      <div class="col-lg-3 gy-2">
         <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
       </div>
-      <div class="col-3 gy-2">
+      <div class="col-lg-3 gy-2">
         <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
       </div>
-      <div class="col-3 gy-2">
+      <div class="col-lg-3 gy-2">
         <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
       </div>
-      <div class="col-3 gy-2">
+      <div class="col-lg-3 gy-2">
         <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
       </div>
-      <div class="col-3 gy-2">
+      <div class="col-lg-3 gy-2">
         <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
       </div>
-      <div class="col-3 gy-2">
+      <div class="col-lg-3 gy-2">
         <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style = "background-color: #E8E7E8;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12-lg">
+        <form action="/" method="post">
+          {% csrf_token %}
+          <label for="your_name">Your name: </label>
+          <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+          <input type="submit" value="OK">
+      </form>
       </div>
     </div>
   </div>

@@ -1,12 +1,18 @@
 from django.shortcuts import render
- 
+from .forms import NameForm
+from django.http import HttpResponseRedirect
 # Create your views here.
 
 
 def index(request):
-    project_names = {"project_names" : ["PAB" , "Assitant for the blind" , "http://temp.com"]}
-    project_course_revalance = ["VIT" , "Siam internshp" , "Cisco" , "Novartis"]
-    return render(request , 'core/index.html' , project_names)
+    if( request.method == "POST"):
+        form = NameForm(request.POST)
+        if form.is_valid():
+            print(request.POST.get("your_name"))
+    else:
+        form = NameForm()
+ 
+    return render(request , 'core/index.html' , {"form": form})
 
 
 def base(request):
