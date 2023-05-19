@@ -82,10 +82,13 @@
   <div class="container">
     <div class="row">
       <div class="col-12-lg">
-        <form action="/" method="post">
+        <form action="/" method="POST">
           {% csrf_token %}
-          <label for="your_name">Your name: </label>
-          <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+          <label for="nn">Your name: </label>
+          <input id="your_name" type="text" name="your_name" value="" placeholder="Enter your name">
+          <input id="your_email" type="text" name="your_email" value="" placeholder = "Enter your email">
+          <input id="your_phone" type="text" name="your_phone" value="" placeholder=" Enter your phone number">
+          <input id="your_query" type="text" name="your_query" value="" placeholder="Enter your query">
           <input type="submit" value="OK">
       </form>
       </div>
@@ -93,4 +96,3 @@
   </div>
 </div>
 {% endblock %}
-
