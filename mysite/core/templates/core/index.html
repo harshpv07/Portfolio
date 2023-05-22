@@ -6,18 +6,44 @@
 
 {% block content %}
 
-<div class="section" id = "intro">
+<link rel="stylesheet" href="{% static '/css/typewriting.css' %}">
+<link rel="stylesheet" href="{% static '/css/timeline.css' %}">
+<link rel="stylesheet" href="{% static '/css/contact_form.css' %}">
+
+<script>
+  // Get the video
+  var video = document.getElementById("myVideo");
+  
+  // Get the button
+  var btn = document.getElementById("myBtn");
+  
+  // Pause and play the video, and change the button text
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
+    }
+  }
+</script>
+
+
+<div class="section" id = "intro" style = "width : 100%">
   <div class="row">
-    <div class="text-center">
-      <i class="fa fa-align-center" aria-hidden="true" style = "font-size: 30px">Welcome to my page </i>
+    <div class="col-lg-6">
+      <div class="typewriter">
+        <h1>Hi there. Welcome to my webpage !! </h1>
+      </div>
     </div>
   </div>
 </div>
 
 
-<div class = "section" style = "background-color:#EBAEE4; padding-bottom : 20px;" id = "projects">
+<div class = "section" style = "background-color:#ffbbf7; padding-bottom : 20px;" id = "projects">
   <div class = "container" >
-    <div class="row justify-content-center">
+    <div class="row">
       <div class="col-lg-4 ">
         .<div class="card text-dark"  style = "background-color : #E8E7E8;width : 300px ; height : 400px;">
           <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
@@ -48,7 +74,6 @@
  
       
     </div>
-    
   </div>
 </div>
 
@@ -78,20 +103,90 @@
   </div>
 </div>
 
+
+
+
 <div class="section" style = "background-color: #E8E7E8;">
   <div class="container">
     <div class="row">
       <div class="col-12-lg">
-        <form action="/" method="POST">
-          {% csrf_token %}
-          <label for="nn">Your name: </label>
-          <input id="your_name" type="text" name="your_name" value="" placeholder="Enter your name">
-          <input id="your_email" type="text" name="your_email" value="" placeholder = "Enter your email">
-          <input id="your_phone" type="text" name="your_phone" value="" placeholder=" Enter your phone number">
-          <input id="your_query" type="text" name="your_query" value="" placeholder="Enter your query">
-          <input type="submit" value="OK">
-      </form>
+          <div class="container">                      
+            <div class="row text-center justify-content-center mb-5">
+                <div class="col-xl-6 col-lg-8">
+                    <h2 class="font-weight-bold">A Company Evolution</h2>
+                    <p class="text-muted">We’re very proud of the path we’ve taken. Explore the history that made us the company we are today.</p>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col">
+                    <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">2003</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">Favland Founded</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">2004</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">Launched Trello</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">2005</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">Launched Messanger</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">2010</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">Open New Branch</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step mb-0">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">2020</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">In Fortune 500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-lg-4">
+        <form action = "/" method = "POST">
+          {% csrf_token %}
+          <label for="fname">First Name</label>
+          <input id="your_name" type="text" name="your_name" value="" placeholder="Enter your name">
+          <label for="country">Email Address</label>
+          <input id="your_email" type="text" name="your_email" value="" placeholder = "Enter your email">
+          <label for="country">Phone Number</label>
+          <input id="your_phone" type="text" name="your_phone" value="" placeholder=" Enter your phone number">
+          <label for="country">Query</label>
+          <input id="your_query" type="text" name="your_query" value="" style="height:200px">
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+      <div class="col-4"></div>
     </div>
   </div>
 </div>
