@@ -9,23 +9,28 @@
 <link rel="stylesheet" href="{% static '/css/typewriting.css' %}">
 <link rel="stylesheet" href="{% static '/css/timeline.css' %}">
 <link rel="stylesheet" href="{% static '/css/contact_form.css' %}">
+<link rel="stylesheet" href="{% static '/css/landing_page.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 
 
-
-<div class="section" id = "intro" style = "width : 100%">
-  <div class="row">
-    <div class="col-lg-6">
-      <div class="typewriter">
-        <h1>Hi there. Welcome to my webpage !! </h1>
+<!-- Introduction section -->
+<div class="section" id = "intro">
+  <div class = "container-fluid" style = "position: relative;">
+    <div class="row">
+      <div class="col px-0">
+        <img src = "{% static '/images/landing_page.jpeg' %}" style = "width: 100%;" />
+        <div class = "text_landing_page">Welcome to my page !! </div>
       </div>
     </div>
   </div>
 </div>
 
 
-<div class = "section" style = "background-color:#ffbbf7; padding-bottom : 20px;" id = "projects">
+
+
+<!-- Project Section -->
+<div class = "section" style = "background-color:#b6b3b3; padding-bottom : 20px;" id = "projects">
   <div class = "container" >
     <div class="row">
       <div class="col-lg-4 ">
@@ -62,35 +67,24 @@
 </div>
 
 
-<div class="section" id = "techstack" style = "background-color: #BEF1FF;">
+
+<!-- Tech stack Section -->
+<div class="section" id = "techstack" style = "background-color: #E8E7E8;">
   <div class="container" style="padding-top : 20px ; padding-bottom : 20px">
     <div class="row">
+      {% for flag in flags %}
       <div class="col-lg-3 gy-2">
-        <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
+        <img class="card-img-top" src = "{% static flag %}" alt="Card image" style = "width : 100%;">
       </div>
-      <div class="col-lg-3 gy-2">
-        <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
-      </div>
-      <div class="col-lg-3 gy-2">
-        <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
-      </div>
-      <div class="col-lg-3 gy-2">
-        <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
-      </div>
-      <div class="col-lg-3 gy-2">
-        <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
-      </div>
-      <div class="col-lg-3 gy-2">
-        <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
 
 
-
-
-<div class="section" style = "background-color: #E8E7E8;">
+<!-- 
+Timeline section -->
+<div class="section" style = "background-color: #b6b3b3;">
   <div class="container">
     <div class="row">
       <div class="col-12-lg">
@@ -150,7 +144,7 @@
 </div>
 
 
-
+<!-- Contact Information Section -->
 <div class="section">
   <div class="container_contact">
     <div class="row">
