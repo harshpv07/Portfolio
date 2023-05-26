@@ -33,35 +33,17 @@
 <div class = "section" style = "background-color:#b6b3b3; padding-bottom : 20px;" id = "projects">
   <div class = "container" >
     <div class="row">
-      <div class="col-lg-4 ">
-        .<div class="card text-dark"  style = "background-color : #E8E7E8;width : 300px ; height : 400px;">
-          <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">Text</p>
+      {% for projects in project %}
+        <div class="col-lg-4 ">
+          .<div class="card text-dark"  style = "background-color : #E8E7E8;width : 300px ; height : 400px;">
+            <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">{{ projects.proj_name }}</h4>
+              <p class="card-text">{{ projects.project_descrip}}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4">
-        .<div class="card text-dark"  style = "background-color : #E8E7E8;width : 300px ; height : 400px;">
-          <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">Text</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        .<div class="card text-dark"  style = "background-color : #E8E7E8; width : 300px ; height : 400px;">
-          <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">Text</p>
-          </div>
-        </div>
-      </div>
- 
-      
+      {% endfor %}
     </div>
   </div>
 </div>
@@ -74,7 +56,7 @@
     <div class="row">
       {% for flag in flags %}
       <div class="col-lg-3 gy-2">
-        <img class="card-img-top" src = "{% static flag %}" alt="Card image" style = "width : 100%;">
+        <img class="card-img-top" src = "{% static flag %}" alt="Card image" style = "width : 100%; ">
       </div>
       {% endfor %}
     </div>
@@ -168,4 +150,6 @@ Timeline section -->
     </div>
   </div>
 </div>
+
+
 {% endblock %}
