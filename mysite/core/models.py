@@ -43,6 +43,7 @@ class WorkModel(models.Model): #DB model for my work ex details
     work_name = models.CharField(max_length=100)
     work_image = models.ImageField()
     work_role = models.CharField(max_length = 100)
+   
     class Meta:
         verbose_name_plural = "Work Name" #Django tends to add an 's' in the models page. We are trying to maintain it. 
     

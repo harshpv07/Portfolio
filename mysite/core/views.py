@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import NameForm
 from django.http import HttpResponseRedirect
 from django.conf import settings
-from .models import ContactModel, StackModel, ProjectModel
+from .models import ContactModel, StackModel, ProjectModel, WorkModel
 import os
 
 
@@ -20,6 +20,7 @@ def index(request):
     for k in b: 
         projects.append({"proj_name" : k.proj_name , "project_descrip" : k.project_descrip, "proj_image" : k.proj_image , "proj_related" : k.proj_related})
         
+    print(WorkModel.objects.all().filter())
     context["project"] = projects
     context['flags'] = flags
     
