@@ -16,13 +16,9 @@
 
 <!-- Introduction section -->
 <div class="section" id = "intro">
-  <div class = "container-fluid" style = "position: relative;">
-    <div class="row">
-      <div class="col px-0">
-        <img src = "{% static '/images/landing_page.jpeg' %}" style = "width: 100%;" />
-        <div class = "text_landing_page">Welcome to my page !! </div>
-      </div>
-    </div>
+  <div class = "container-fluid p-0">
+    <img src = "{% static '/images/landing_page.jpeg' %}" style = "width: 100%; position : relative;" />
+    <!-- <div class = "text_landing_page" style = "position: absolute;">Welcome to my page !! </div> -->
   </div>
 </div>
 
@@ -34,7 +30,7 @@
   <div class = "container" >
     <div class="row">
       {% for projects in project %}
-        <div class="col-lg-4 ">
+        <div class="col-lg-4 p-1 m-0">
           .<div class="card text-dark"  style = "background-color : #E8E7E8;width : 300px ; height : 400px;">
             <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
             <div class="card-body">
@@ -56,7 +52,7 @@
     <div class="row">
       {% for flag in flags %}
       <div class="col-lg-3 gy-2">
-        <img class="card-img-top" src = "{% static flag %}" alt="Card image" style = "width : 100%; ">
+        <img class="card-img-top" src = "{% static flag %}" alt="Card image" style = "width : 100%;">
       </div>
       {% endfor %}
     </div>
@@ -130,7 +126,9 @@ Timeline section -->
 <div class="section">
   <div class="container_contact">
     <div class="row">
-      <div class="col-4"></div>
+      <div class="col-4 ">
+        <h2>Contact information</h2>
+      </div>
       <div class="col-lg-4">
         <form action = "/" method = "POST">
           {% csrf_token %}
