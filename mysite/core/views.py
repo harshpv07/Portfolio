@@ -19,11 +19,17 @@ def index(request):
     projects = []
     for k in b: 
         projects.append({"proj_name" : k.proj_name , "project_descrip" : k.project_descrip, "proj_image" : k.proj_image , "proj_related" : k.proj_related})
-        
-    print(WorkModel.objects.all().filter())
+    
+    work = []
+    c = (WorkModel.objects.all().filter())
+    for k in c:
+        work.append({"work_name" : k.work_name , "work_image" : k.work_image, "work_role" : k.work_role, "work_date" : k.work_date})
+    
     context["project"] = projects
     context['flags'] = flags
-    
+    context["work"] = work
+
+
     if( request.method == "POST"): #Check if it is a post request
         name = request.POST.get("your_name") #Get the value of the field "your_name" from the request
         email = request.POST["your_email"]

@@ -25,12 +25,12 @@
 
 
 <!-- Project Section -->
-<div class = "section" style = "background-color:#b6b3b3; padding-bottom : 20px;" id = "projects">
+<div class = "section" style = "background-color:#E8E7E8; padding-bottom : 20px;" id = "projects">
   <div class = "container" >
     <div class="row">
       {% for projects in project %}
         <div class="col-lg-4 p-1 m-0">
-          .<div class="card text-dark"  style = "background-color : #E8E7E8;width : 300px ; height : 400px;">
+          .<div class="card text-dark"  style = "background-color : #ffffff;width : 300px ; height : 400px;">
             <img class="card-img-top" src = "{% static './images/Blind.jpg' %}" alt="Card image" style="width:100%">
             <div class="card-body">
               <h4 class="card-title">{{ projects.proj_name }}</h4>
@@ -46,7 +46,7 @@
 
 
 <!-- Tech stack Section -->
-<div class="section" id = "techstack" style = "background-color: #E8E7E8;">
+<div class="section" id = "techstack" style="background-image: url('{% static '/images/stack_background.jpg' %}');">
   <div class="container" style="padding-top : 20px ; padding-bottom : 20px">
     <div class="row">
       {% for flag in flags %}
@@ -61,44 +61,31 @@
 
 <!-- 
 Timeline section -->
-<div class="section" style = "background-color: #b6b3b3;">
-  <div class="container">
+  <div class="container my-5">
     <div class="row">
-      <div class="col-12-lg">
-          <div class="container">                      
-            <div class="row text-center justify-content-center mb-5">
-                <div class="col-xl-6 col-lg-8">
-                    <h2 class="font-weight-bold">A Company Evolution</h2>
-                    <p class="text-muted">We’re very proud of the path we’ve taken. Explore the history that made us the company we are today.</p>
-                </div>
-            </div>
-        
-            <div class="row">
-                <div class="col">
-                    <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
-                        <div class="timeline-step">
-                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                                <div class="inner-circle"></div>
-                                <p class="h6 mt-3 mb-1">2003</p>
-                                <p class="h6 text-muted mb-0 mb-lg-0">Favland Founded</p>
-                            </div>
-                        </div>
-      
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="col-md-6 offset-md-3">
+        <h4 style="margin-left: 1.2rem;">Work Experience</h4>
+        <ul class="timeline-3">
+          {% for works in work %}
+          <li>
+            <a href="#!">{{works.work_name}}</a>
+            <a href="#!" class="float-end">{{works.work_date}}</a>
+            <p class="mt-2">{{ works.work_role }}</p>
+         </li>
+          {% endfor %}        
+        </ul>
       </div>
     </div>
   </div>
-</div>
+
+
 
 
 <!-- Contact Information Section -->
-<div class="section" style="background-image: url('{% static '/images/contact_background.jpg' %}');"> 
+<div class="section" style="background-image: url('{% static '/images/contact_background.jpg' %}'); width : 100%;"> 
   <div class="container">
     <div class="row" style = "align-items: center;">
-      <div class="col-4 " style = 'text-align : center;'>
+      <div class="col-lg-4 " style = 'text-align : center;'>
         <h2>Would you like to reach out to me? </h2>
         <p>Send in your queries here and I will reach out to you at the earliest</p>
       </div>
