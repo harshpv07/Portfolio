@@ -15,13 +15,23 @@
 
 
 <!-- Introduction section -->
-<div class="section">
-  <div class = "container-fluid">
-    <img src = "{% static '/images/landing_page.jpeg' %}" style = "width: 100%; position : relative;" />
+<!-- <div class="section-landing">
+  <div class = "container-fluid p-0" style = "width : 100%; position : relative;">
+    <img src = "{% static '/images/landing_page.jpeg' %}" style = "width: 100%; " />
   </div>
-</div>
+</div> -->
 
-
+<section>
+  <div class = "container-fluid"  style = "position : relative">
+    <div class="row">
+      <div class="col-12 p-0 m-0">
+        <h1 style = "padding-right : 50px; padding-bottom : 50px; color : white ; position : absolute; "> Hey </h1>
+        <img src = "{% static '/images/landing_page.jpeg' %}" style = "width: 100%;" />
+       
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Project Section -->
@@ -46,7 +56,7 @@
 
 
 <!-- Tech stack Section -->
-<div class="section" id = "techstack" style="background-image: url('{% static '/images/stack_background.jpg' %}');">
+<div class="section" id = "techstack" style="background-image: url('{% static '/images/landing_page.jpeg' %}'); width : 100%;">
   <div class="container" style="padding-top : 20px ; padding-bottom : 20px">
     <div class="row">
       {% for flag in flags %}
