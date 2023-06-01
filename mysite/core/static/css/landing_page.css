@@ -1,0 +1,27 @@
+.containerr {
+    position: relative;
+    width: 100%;
+     /* Set the maximum width for the container */
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  /* Media query for responsive font size */
+  @media (max-width: 600px) {
+    .text {
+      font-size: 14px;
+    }
+  }
