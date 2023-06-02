@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="{% static '/css/landing_page.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+<script src="{% static '/js/video.js' %}"></script>
 
 
 <!-- Introduction section -->
@@ -21,7 +22,7 @@
   </div>
 </div> -->
 
-<section>
+<section id = "section_landing">
     <div class="containerr">
       <img class="image" src="{% static '/images/landing_page.jpeg' %}" alt="Your Image">
       <div class="text">
@@ -34,7 +35,7 @@
 
 
 <!-- Project Section -->
-<div class = "section" style = "background-color:#E8E7E8; padding-bottom : 20px;" id = "projects">
+<section style = "background-color:#E8E7E8; padding-bottom : 20px;" id = "section_projects">
   <div class = "container" style = "align-items: center;" >
     <div class="row">
       <div class="col-lg-12 p-5">
@@ -59,12 +60,12 @@
       {% endfor %}
     </div>
   </div>
-</div>
+</section>
 
 
 
 <!-- Tech stack Section -->
-<div class="section" id = "techstack" style="background-image: url('{% static '/images/landing_page.jpeg' %}'); width : 100%;">
+<section id = "section_techstack" style="background-image: url('{% static '/images/landing_page.jpeg' %}'); width : 100%;">
   <div class="container" style="padding-top : 20px ; padding-bottom : 20px">
     <div class="row">
       <div class="col-lg-12 p-5">
@@ -82,12 +83,12 @@
       {% endfor %}
     </div>
   </div>
-</div>
+</section>
 
 
 <!-- 
 Timeline section -->
-<section>
+<section id = "section_timeline">
   <div class="container p-4 m-0">
     <div class="row">
       <div class="col-md-5 offset-md-1">
@@ -102,7 +103,8 @@ Timeline section -->
           {% endfor %}        
         </ul>
       </div>
-      <div class="col-6">
+      <div class="col-3"></div>
+      <div class="col-3">
         <h1>My work-experience</h1>
       </div>
     </div>
@@ -114,7 +116,7 @@ Timeline section -->
 
 
 <!-- Contact Information Section -->
-<div class="section" style="background-image: url('{% static '/images/contact_background.jpg' %}'); width : 100%;"> 
+<section id = "section_contact" style="background-image: url('{% static '/images/contact_background.jpg' %}'); width : 100%;"> 
   <div class="container">
     <div class="row" style = "align-items: center;">
       <div class="col-lg-4 " style = 'text-align : center;'>
@@ -140,7 +142,7 @@ Timeline section -->
      
     </div>
   </div>
-</div>
+</section>
 
 
 {% endblock %}
