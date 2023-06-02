@@ -65,7 +65,7 @@
 
 
 <!-- Tech stack Section -->
-<section id = "section_techstack" style="background-image: url('{% static '/images/landing_page.jpeg' %}'); width : 100%;">
+<section id = "section_techstack" style="background-image: url('{% static '/images/bg.png' %}'); width : 100%;">
   <div class="container" style="padding-top : 20px ; padding-bottom : 20px">
     <div class="row">
       <div class="col-lg-12 p-5">
@@ -75,8 +75,8 @@
     </div>
     <div class="row">
       {% for flag in flags %}
-      <div class="col-lg-3 gy-2">
-        <img class="card-img-top" src = "{% static flag %}" alt="Card image" style = "width : 100%;">
+      <div class="col-lg-2 p-0 m-0 py-2">
+        <img class="card-img-top" src = "{% static flag %}" alt="Card image" style = "width : 80%;">
         
       </li>
       </div>
